@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FRANK // CS-01 | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Gundam Cursor (Gundam Mode) -->
+  <div id="gundam-cursor" class="gundam-cursor" aria-hidden="true">
+    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Gundam head silhouette cursor -->
+      <polygon points="24,2 30,8 34,8 36,14 36,28 30,34 24,38 18,34 12,28 12,14 14,8 18,8" fill="#00ff88" stroke="#ff6600" stroke-width="1.5"/>
+      <!-- V-fin -->
+      <polygon points="24,2 20,10 24,8 28,10" fill="#ff6600"/>
+      <!-- Visor -->
+      <rect x="16" y="17" width="16" height="6" rx="2" fill="#ffdd00" opacity="0.95"/>
+      <!-- Glow -->
+      <rect x="16" y="17" width="16" height="6" rx="2" fill="#ffdd00" opacity="0.4" filter="url(#glow)"/>
+      <defs>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+          <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- Explosion particles container -->
+  <div id="particles-container"></div>
+
+  <!-- Navigation -->
+  <nav id="main-nav">
+    <div class="nav-logo">FR<span class="accent-orange">A</span>NK <span class="accent-orange">//</span> CS-01</div>
+    <ul class="nav-links">
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#projects">PROJECTS</a></li>
+      <li><a href="#skills">SKILLS</a></li>
+      <li><a href="#experience">EXPERIENCE</a></li>
+      <li><a href="#game">GAME</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+    <div class="nav-controls">
+      <button id="music-btn" class="nav-btn music-btn" title="Toggle Background Music">
+        <span id="music-icon">♫</span> <span id="music-label">MUSIC ON</span>
+      </button>
+      <button id="gundam-mode-btn" class="nav-btn gundam-btn" title="Activate Gundam Mode">
+        ⚔ GUNDAM MODE
+      </button>
+      <div id="status-msg" class="status-msg">● SYSTEM ONLINE</div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hex-grid"></div>
+    <div class="scanlines"></div>
+    <div class="hero-content">
+      <div class="hero-init">// INITIALIZING PILOT INTERFACE //</div>
+      <h1 id="hero-title" class="hero-title">FRANK</h1>
+      <p class="hero-subtitle">Computer Science Portfolio &nbsp;|&nbsp; Grade 8 &nbsp;|&nbsp; Unit-01</p>
+      <div class="hero-status-box">
+        <p>PILOT STATUS: ACTIVE</p>
+        <p>SYNCHRONIZATION RATE: LEARNING</p>
+        <p>MISSION: MASTER THE CODE</p>
+      </div>
+      <div class="hero-btns">
+        <a href="#projects" class="btn-green">VIEW PROJECTS</a>
+        <a href="#game" class="btn-orange">PLAY MY GAME</a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>SCROLL</span>
+      <div class="scroll-arrow">▼</div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="fade-in section-orange-border">
+    <div class="section-container">
+      <div class="section-num">01 //</div>
+      <h2 class="section-title">ABOUT ME</h2>
+      <div class="about-grid">
+        <!-- Avatar -->
+        <div class="avatar-col">
+          <div class="avatar-hex">
+            <img src="gundam_avatar.png" alt="Gundam Avatar — Pilot Frank" id="avatar-img" />
+            <div class="avatar-overlay"></div>
+          </div>
+          <div class="avatar-label">PILOT: FRANK<br/>UNIT-01 // CS DIVISION</div>
+        </div>
+        <!-- Info Table -->
+        <div class="info-col">
+          <table class="info-table">
+            <tbody>
+              <tr><td class="label">Name</td><td class="value">Frank</td></tr>
+              <tr><td class="label">Grade</td><td class="value">8th Grade — Middle School</td></tr>
+              <tr><td class="label">Class</td><td class="value">Computer Science / Coding Class</td></tr>
+              <tr><td class="label">Location</td><td class="value">United States</td></tr>
+              <tr><td class="label">Focus</td><td class="value">Python · Web Dev · Game Dev · Debugging</td></tr>
+              <tr><td class="label">Status</td><td class="value">● Active Learner</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- Bio -->
+      <div class="bio-box">
+        <p class="bio-tag">// PILOT PROFILE</p>
+        <p class="bio-text">
+          Hey! I'm Frank, an 8th grader taking Computer Science class in the United States. In CS class, we explore the fundamentals of programming — from writing our first lines of Python to building full web pages from scratch. I've learned how computers think, how to break big problems into small steps, and how to debug code when things go wrong (which they always do at first!). Our class covers everything from block-based coding concepts all the way to real JavaScript and Python projects. I built this very page as part of my coursework, and I'm proud to share what I've learned so far on this journey to becoming a developer.
+        </p>
+        <p class="bio-text">
+          I'm excited to continue expanding my skills and taking on more challenging projects. Every line of code I write brings me closer to mastering the craft of programming, and I can't wait to see what I'll build next!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="fade-in">
+    <div class="section-container">
+      <div class="section-num">02 //</div>
+      <h2 class="section-title">PROJECTS</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card card-green fade-in">
+          <div class="project-icon">🎮</div>
+          <h3 class="project-name green">CAT SOUL SURVIVAL</h3>
+          <p class="project-type">Game Development</p>
+          <p class="project-desc">A full platformer survival game built from the ground up. Started as a simple Scratch concept and was re-engineered in JavaScript — featuring multi-stage progression, boss fights, homing projectiles, dash mechanics, and an endless survival mode.</p>
+          <div class="tag-row">
+            <span class="tag tag-green">JavaScript</span>
+            <span class="tag tag-green">HTML5 Canvas</span>
+            <span class="tag tag-green">Game Logic</span>
+            <span class="tag tag-orange">Scratch → JS</span>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card card-purple fade-in">
+          <div class="project-icon">🐍</div>
+          <h3 class="project-name purple">PYTHON CODE DRILLS</h3>
+          <p class="project-type">Programming Practice</p>
+          <p class="project-desc">A series of Python coding exercises completed throughout the semester — covering loops, conditionals, functions, and data structures. Each drill reinforced core programming logic and problem-solving skills.</p>
+          <div class="tag-row">
+            <span class="tag tag-purple">Python 3</span>
+            <span class="tag tag-purple">Loops</span>
+            <span class="tag tag-purple">Functions</span>
+            <span class="tag tag-orange">Debugging</span>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card card-cyan fade-in">
+          <div class="project-icon">🌐</div>
+          <h3 class="project-name cyan">THIS PORTFOLIO WEBSITE</h3>
+          <p class="project-type">Web Development</p>
+          <p class="project-desc">The very page you're reading right now! Built as a CS class assignment to demonstrate HTML5, CSS3, and JavaScript skills. Designed with a Gundam &amp; Evangelion-inspired aesthetic.</p>
+          <div class="tag-row">
+            <span class="tag tag-cyan">HTML5</span>
+            <span class="tag tag-cyan">CSS3</span>
+            <span class="tag tag-cyan">JavaScript</span>
+            <span class="tag tag-orange">GitHub</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="fade-in section-green-border">
+    <div class="section-container">
+      <div class="section-num">03 //</div>
+      <h2 class="section-title">SKILLS</h2>
+
+      <!-- Core Languages -->
+      <div class="skills-group">
+        <p class="skills-group-label">// CORE LANGUAGES</p>
+        <div class="skill-bars">
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">82%</span></div><div class="skill-track"><div class="skill-bar-fill" data-width="82"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">HTML5</span><span class="skill-pct">78%</span></div><div class="skill-track"><div class="skill-bar-fill" data-width="78"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">CSS3</span><span class="skill-pct">72%</span></div><div class="skill-track"><div class="skill-bar-fill" data-width="72"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">JavaScript</span><span class="skill-pct">65%</span></div><div class="skill-track"><div class="skill-bar-fill" data-width="65"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">Scratch</span><span class="skill-pct">90%</span></div><div class="skill-track"><div class="skill-bar-fill" data-width="90"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Dev Skills -->
+      <div class="skills-group">
+        <p class="skills-group-label">// DEV SKILLS</p>
+        <div class="skill-bars">
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">Debugging</span><span class="skill-pct">80%</span></div><div class="skill-track"><div class="skill-bar-fill" data-width="80"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">Problem Solving</span><span class="skill-pct">75%</span></div><div class="skill-track"><div class="skill-bar-fill" data-width="75"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">GitHub</span><span class="skill-pct">60%</span></div><div class="skill-track"><div class="skill-bar-fill" data-width="60"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">Game Development</span><span class="skill-pct">68%</span></div><div class="skill-track"><div class="skill-bar-fill" data-width="68"></div></div></div>
+          <div class="skill-item"><div class="skill-header"><span class="skill-name">Logical Thinking</span><span class="skill-pct">85%</span></div><div class="skill-track"><div class="skill-bar-fill" data-width="85"></div></div></div>
+        </div>
+      </div>
+
+      <!-- Skill Badges -->
+      <div class="badge-row">
+        <span class="badge">🐍 Python</span>
+        <span class="badge">🌐 HTML5</span>
+        <span class="badge">🎨 CSS3</span>
+        <span class="badge">⚡ JavaScript</span>
+        <span class="badge">🐱 Scratch</span>
+        <span class="badge">🔧 Debugging</span>
+        <span class="badge">🐙 GitHub</span>
+        <span class="badge">🧩 Problem Solving</span>
+        <span class="badge">🎮 Game Dev</span>
+        <span class="badge">🔁 Loops &amp; Logic</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="fade-in">
+    <div class="section-container">
+      <div class="section-num">04 //</div>
+      <h2 class="section-title">EXPERIENCE</h2>
+      <div class="experience-list">
+
+        <div class="exp-card fade-in">
+          <p class="exp-semester">SEMESTER 1 // UNIT 01</p>
+          <h4 class="exp-title">Introduction to Programming Concepts</h4>
+          <p class="exp-desc">Began the journey into computer science by learning the fundamental building blocks of programming. Covered variables, data types, input/output, and the concept of algorithms.</p>
+          <div class="tag-row"><span class="tag tag-orange">Scratch</span><span class="tag tag-orange">Algorithms</span><span class="tag tag-orange">Variables</span></div>
+        </div>
+
+        <div class="exp-card fade-in">
+          <p class="exp-semester">SEMESTER 1 // UNIT 02</p>
+          <h4 class="exp-title">Loops, Conditionals &amp; Control Flow</h4>
+          <p class="exp-desc">Mastered the art of loops — for loops, while loops, and nested loops — to make programs repeat tasks efficiently. Learned how if/else conditionals allow programs to make decisions.</p>
+          <div class="tag-row"><span class="tag tag-orange">Python</span><span class="tag tag-orange">For Loops</span><span class="tag tag-orange">While Loops</span><span class="tag tag-orange">Conditionals</span></div>
+        </div>
+
+        <div class="exp-card fade-in">
+          <p class="exp-semester">SEMESTER 1 // UNIT 03</p>
+          <h4 class="exp-title">Code Practice &amp; Debugging Missions</h4>
+          <p class="exp-desc">Completed a series of structured coding challenges designed to sharpen problem-solving skills. Learned to read error messages, trace bugs through code, and apply systematic debugging strategies.</p>
+          <div class="tag-row"><span class="tag tag-orange">Debugging</span><span class="tag tag-orange">Error Tracing</span><span class="tag tag-orange">Code Review</span></div>
+        </div>
+
+        <div class="exp-card fade-in">
+          <p class="exp-semester">SEMESTER 2 // UNIT 01</p>
+          <h4 class="exp-title">Web Development — HTML5 &amp; CSS3</h4>
+          <p class="exp-desc">Transitioned from Python to web technologies. Built structured web pages using HTML5 semantic elements and styled them with CSS3 — learning layouts, colors, fonts, and responsive design.</p>
+          <div class="tag-row"><span class="tag tag-orange">HTML5</span><span class="tag tag-orange">CSS3</span><span class="tag tag-orange">Responsive Design</span></div>
+        </div>
+
+        <div class="exp-card fade-in">
+          <p class="exp-semester">SEMESTER 2 // UNIT 02</p>
+          <h4 class="exp-title">Game Development — Scratch to JavaScript</h4>
+          <p class="exp-desc">The capstone project of the year: designing and building a complete game. Started with a concept in Scratch, then rebuilt the entire game engine in JavaScript using HTML5 Canvas.</p>
+          <div class="tag-row"><span class="tag tag-orange">JavaScript</span><span class="tag tag-orange">Canvas API</span><span class="tag tag-orange">Game Physics</span><span class="tag tag-orange">Project Build</span></div>
+        </div>
+
+        <div class="exp-card fade-in">
+          <p class="exp-semester">ONGOING // CURRENT</p>
+          <h4 class="exp-title">GitHub &amp; Portfolio Building</h4>
+          <p class="exp-desc">Learning to use GitHub for version control — committing code, managing repositories, and publishing projects. Building this portfolio website as a showcase of everything accomplished in CS class.</p>
+          <div class="tag-row"><span class="tag tag-orange">GitHub</span><span class="tag tag-orange">Version Control</span><span class="tag tag-orange">Portfolio</span></div>
+        </div>
+
+        <div class="exp-card fade-in">
+          <p class="exp-semester">ONGOING // ROBOTICS CLASS</p>
+          <h4 class="exp-title">Robotics Engineering — LEGO SPIKE Prime</h4>
+          <p class="exp-desc">Designing and building robots using LEGO SPIKE Prime. Completed multiple missions and projects involving mechanical design, sensor integration, and autonomous programming. Learned to troubleshoot mechanical and software issues in a team environment.</p>
+          <div class="tag-row"><span class="tag tag-orange">LEGO SPIKE</span><span class="tag tag-orange">Robot Design</span><span class="tag tag-orange">Mission Programming</span><span class="tag tag-orange">Teamwork</span></div>
+        </div>
+
+        <div class="exp-card fade-in">
+          <p class="exp-semester">ONGOING // ATHLETICS</p>
+          <h4 class="exp-title">Varsity Golf — School Team MVP</h4>
+          <p class="exp-desc">Earned MVP (Most Valuable Player) award on the school golf team. Demonstrated dedication, consistency, and leadership both on and off the course. Balanced competitive athletics with academic pursuits in computer science and robotics.</p>
+          <div class="tag-row"><span class="tag tag-orange">Golf</span><span class="tag tag-orange">Varsity Team</span><span class="tag tag-orange">MVP Award</span><span class="tag tag-orange">Leadership</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Game Section -->
+  <section id="game" class="fade-in section-cyan-border">
+    <div class="section-container">
+      <div class="section-num">05 //</div>
+      <h2 class="section-title">MY GAME</h2>
+      <div class="game-box">
+        <p class="game-tag">// CAT SOUL SURVIVAL — INTERACTIVE DEMO</p>
+        <p class="game-note">CLICK GAME AREA TO ACTIVATE CONTROLS</p>
+        
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+#gc{position:relative;width:100%;display:flex;flex-direction:column;align-items:center;background:#0a0010;font-family:monospace;min-height:540px}
+canvas{display:block;image-rendering:pixelated;border:2px solid #6633aa}
+#ui{position:absolute;top:8px;left:8px;color:#fff;font-size:12px;pointer-events:none;text-shadow:1px 1px 0 #000;z-index:10;line-height:1.7}
+.sbar{display:flex;gap:3px;margin-top:2px;flex-wrap:wrap;max-width:200px}
+.sd{width:9px;height:9px;border-radius:50%;border:1px solid #aaa}
+.sf{background:#a66fff;border-color:#d4aaff}
+#ctrl{position:absolute;bottom:5px;right:6px;color:#666;font-size:9px;pointer-events:none;text-align:right;line-height:1.5}
+#msg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;font-size:17px;text-align:center;text-shadow:2px 2px 0 #6600aa;pointer-events:none;z-index:20;white-space:pre-line}
+</style>
+<div id="gc">
+<canvas id="c" width="640" height="480"></canvas>
+<div id="ui">
+  <div>HP: <span id="hp">3</span>/<span id="mhp">3</span> &nbsp;|&nbsp; Souls: <span id="souls">0</span></div>
+  <div>Stage: <span id="stg">Spirit Ruins</span></div>
+  <div class="sbar" id="sb"></div>
+</div>
+<div id="ctrl">
+  Arrow/WASD Move &nbsp;|&nbsp; Z/W/↑ Jump (double jump)<br>
+  X Attack/Shoot &nbsp;|&nbsp; Double-tap ←→ Dash (Stage 2+) &nbsp;|&nbsp; R Restart
+</div>
+<div id="msg"></div>
+</div>
+<script>
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const W=640,H=480,T=16,MW=120,MH=40;
+
+let keys={},fc=0,gs='PLAYING';
+let stage=1,souls=0,maxSouls=10;
+let bossKilled=false,msgTxt='',msgTmr=0;
+let parts=[],floats=[],map=[];
+let cam={x:0,y:0};
+let enemies=[],pickups=[],eProjs=[];
+let pProjs=[];   // player homing gun bullets
+let boss=null;
+let waves=[],gsword={active:false},sBeams=[];
+let dash={active:false,dir:0,tmr:0,dur:15,spd:12,cd:0,maxCd:180,hit:new Set()};
+let lastTap={l:0,r:0};
+let hasGun=false,gunCd=0;
+let survivalMode=false,waveTimer=0,waveCount=0,killCount=0;
+
+const rng=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
+const rnf=(a,b)=>Math.random()*(b-a)+a;
+function gT(x,y){if(x<0||x>=MW||y<0||y>=MH)return 1;return map[y*MW+x];}
+function sT(x,y,v){if(x<0||x>=MW||y<0||y>=MH)return;map[y*MW+x]=v;}
+function cMap(x,y,w,h){
+  for(let tx=~~(x/T);tx<=~~((x+w-1)/T);tx++)
+    for(let ty=~~(y/T);ty<=~~((y+h-1)/T);ty++)
+      if(gT(tx,ty)>0)return true;
+  return false;
+}
+function mvEnt(e){
+  e.vy=Math.min(e.vy+0.33,12);
+  e.x+=e.vx;if(cMap(e.x,e.y,e.w,e.h)){e.x-=e.vx;e.vx=0;}
+  e.y+=e.vy;
+  if(cMap(e.x,e.y,e.w,e.h)){e.onG=e.vy>0;e.y-=e.vy;e.vy=0;}else e.onG=false;
+  if(e.x<0){e.x=0;e.vx=0;}if(e.x+e.w>MW*T){e.x=MW*T-e.w;e.vx=0;}
+  if(e.y<0){e.y=0;e.vy=0;}if(e.y+e.h>MH*T){e.y=MH*T-e.h;e.vy=0;e.onG=true;}
+}
+function ol(a,b){return a.x<b.x+b.w&&a.x+a.w>b.x&&a.y<b.y+b.h&&a.y+a.h>b.y;}
+function addP(x,y,n,col){for(let i=0;i<n;i++)parts.push({x,y,vx:rnf(-3,3),vy:rnf(-4,0),l:rng(20,40),ml:40,col,s:rng(2,5)});}
+function addF(x,y,t,col){floats.push({x,y,t,col,l:60,vy:-0.6});}
+const SX=wx=>Math.round(wx-cam.x),SY=wy=>Math.round(wy-cam.y);
+
+function genWorld(){
+  map=new Array(MW*MH).fill(0);
+  for(let x=0;x<MW;x++){let by=26+Math.round(Math.sin(x*.15)*2+Math.cos(x*.08)*1.5);for(let y=by;y<MH;y++)sT(x,y,y>by+3?2:1);}
+  for(let i=0;i<35;i++){let px=rng(2,MW-8),py=rng(14,24),pw=rng(3,7);for(let d=0;d<pw;d++)sT(px+d,py,1);}
+  for(let i=0;i<10;i++){let cx=rng(5,MW-5),ch=rng(3,7),cy=26-ch;for(let d=0;d<ch;d++)sT(cx,cy+d,1);}
+}
+
+let pl={};
+function mkPl(mhp){return{x:15*T,y:20*T,w:14,h:14,vx:0,vy:0,onG:false,hp:mhp,mhp,spd:2.2,jf:-7.2,atk:0,inv:0,face:1,at:0,st:'idle',jl:2};}
+function hurtPl(dmg,src){
+  if(pl.inv>0||gs!=='PLAYING')return;
+  pl.hp-=dmg;pl.inv=85;
+  if(src){pl.vy=-4;pl.vx=pl.x<src.x?-4:4;}
+  addP(pl.x+7,pl.y+7,10,'#ff3366');addF(pl.x,pl.y-12,'-'+dmg+' HP','#ff3366');
+  updUI();
+  if(pl.hp<=0){gs='DEAD';showMsg('Soul Faded...\n\nPress R to Restart',9999);}
+}
+
+// ── Dash ──────────────────────────────────────────────────
+function tryDash(dir){
+  if(stage<2||dash.active||dash.cd>0)return;
+  dash.active=true;dash.dir=dir;dash.tmr=dash.dur;dash.hit=new Set();
+  pl.inv=dash.dur+8;addP(pl.x+7,pl.y+7,14,'#8855ff');addF(pl.x,pl.y-14,'Dash!','#cc88ff');
+}
+function updDash(){
+  if(!dash.active){if(dash.cd>0)dash.cd--;return;}
+  dash.tmr--;
+  let moved=0;
+  while(moved<dash.spd){let s=Math.min(1,dash.spd-moved),nx=pl.x+dash.dir*s;if(cMap(nx,pl.y,pl.w,pl.h)){dash.active=false;break;}pl.x=nx;moved+=s;}
+  pl.vx=0;pl.face=dash.dir;
+  for(let e of enemies){if(!e.alive||dash.hit.has(e))continue;if(ol(pl,e)){dash.hit.add(e);e.hp-=2;addP(e.x+7,e.y+7,8,'#cc66ff');addF(e.x,e.y-8,'-2','#cc66ff');if(e.hp<=0)killEnemy(e);}}
+  if(fc%3===0)addP(pl.x+7,pl.y+7,3,'#8844cc');
+  if(dash.tmr<=0){dash.active=false;dash.cd=dash.maxCd;pl.vx=0;}
+}
+
+function killEnemy(e){
+  e.alive=false;addP(e.x+7,e.y+7,12,'#aa55ff');addF(e.x,e.y-16,'Soul!','#ddaaff');
+  if(survivalMode){killCount++;updUI();}else spawnSoul(e.x+7,e.y);
+}
+
+// ── Arc wave (stage 1) ────────────────────────────────────
+function spawnWave(cx,cy,dir){waves.push({cx,cy,dir,r:8,mR:62,l:22,ml:22,he:new Set(),hb:false});}
+function updWaves(){
+  for(let w of waves){
+    w.l--;w.r=Math.max(10,w.mR*(1-w.l/w.ml));
+    for(let e of enemies){if(!e.alive||w.he.has(e))continue;let ex=e.x+7,ey=e.y+7,dx=ex-w.cx,dy=ey-w.cy,d=Math.sqrt(dx*dx+dy*dy),sok=w.dir>0?dx>-10:dx<10;if(sok&&d<w.r+14&&d>w.r-26){w.he.add(e);e.hp-=2;addP(ex,ey,8,'#ff99ff');addF(e.x,e.y-8,'-2','#ff99ff');if(e.hp<=0)killEnemy(e);}}
+    if(boss&&boss.alive&&!w.hb){let bx=boss.x+16,by=boss.y+16,dx=bx-w.cx,dy=by-w.cy,d=Math.sqrt(dx*dx+dy*dy),sok=w.dir>0?dx>-10:dx<10;if(sok&&d<w.r+22&&d>w.r-30){w.hb=true;boss.hp-=2;addP(bx,by,10,'#ffaa00');addF(boss.x,boss.y-10,'-2','#ffaa00');}}
+  }
+  waves=waves.filter(w=>w.l>0);
+}
+
+// ── Greatsword (stage 2+) ─────────────────────────────────
+function spawnGS(cx,cy,dir){
+  gsword={active:true,tmr:26,dur:26,dir,cx,cy,he:new Set(),hb:false};
+  if(stage>=3)sBeams.push({x:cx,y:cy,dir,vx:dir*9,vy:0,w:34,h:14,alive:true,he:new Set(),hb:false,age:0});
+}
+function updGS(){
+  if(!gsword.active)return;gsword.tmr--;
+  let elp=gsword.dur-gsword.tmr,hs=~~(gsword.dur*.15),he2=~~(gsword.dur*.9);
+  if(elp>=hs&&elp<=he2){
+    let cx=gsword.cx,cy=gsword.cy,br=68;
+    for(let e of enemies){if(!e.alive||gsword.he.has(e))continue;let ex=e.x+7,ey=e.y+7,dx=ex-cx,dy=ey-cy,d=Math.sqrt(dx*dx+dy*dy),sok=gsword.dir>0?dx>-22:dx<22;if(d<br&&sok){gsword.he.add(e);e.hp-=3;addP(ex,ey,10,'#ffffaa');addF(e.x,e.y-8,'-3','#ffffaa');if(e.hp<=0)killEnemy(e);}}
+    if(boss&&boss.alive&&!gsword.hb){let bx=boss.x+16,by=boss.y+16,dx=bx-cx,dy=by-cy,d=Math.sqrt(dx*dx+dy*dy),sok=gsword.dir>0?dx>-22:dx<22;if(d<br+18&&sok){gsword.hb=true;boss.hp-=3;addP(bx,by,12,'#ffaa00');addF(boss.x,boss.y-10,'-3','#ffaa00');}}
+  }
+  if(gsword.tmr<=0)gsword.active=false;
+}
+function updSBeams(){
+  for(let sp of sBeams){
+    sp.age++;sp.x+=sp.vx;
+    if(cMap(sp.x+(sp.dir>0?sp.w:0),sp.y,2,sp.h)||sp.x>MW*T||sp.x+sp.w<0){sp.alive=false;addP(sp.x+sp.w/2,sp.y+sp.h/2,10,'#ffffaa');continue;}
+    let hb={x:sp.x,y:sp.y-4,w:sp.w,h:sp.h+8};
+    for(let e of enemies){if(!e.alive||sp.he.has(e))continue;if(ol(hb,e)){sp.he.add(e);e.hp-=3;addP(e.x+7,e.y+7,10,'#ffffaa');addF(e.x,e.y-8,'-3','#ffffaa');if(e.hp<=0)killEnemy(e);}}
+    if(boss&&boss.alive&&!sp.hb&&ol(hb,boss)){sp.hb=true;boss.hp-=3;addP(boss.x+16,boss.y+16,12,'#ffaa00');addF(boss.x,boss.y-10,'-3','#ffaa00');}
+  }
+  sBeams=sBeams.filter(s=>s.alive);
+}
+
+// ── Homing energy gun ─────────────────────────────────────
+function nearestEnemy(ox,oy){let best=Infinity,tgt=null;for(let e of enemies){if(!e.alive)continue;let dx=e.x+7-ox,dy=e.y+7-oy,d=dx*dx+dy*dy;if(d<best){best=d;tgt=e;}}return tgt;}
+function fireGun(){
+  let tgt=nearestEnemy(pl.x+7,pl.y+7);
+  let spd=7.5,ang=tgt?Math.atan2(tgt.y+7-(pl.y+7),tgt.x+7-(pl.x+7)):(pl.face>0?0:Math.PI);
+  pProjs.push({x:pl.x+7,y:pl.y+7,vx:Math.cos(ang)*spd,vy:Math.sin(ang)*spd,tgt,alive:true,r:6,age:0});
+  addP(pl.x+(pl.face>0?16:-4),pl.y+7,4,'#00ffff');
+}
+function updPProjs(){
+  for(let p of pProjs){
+    p.age++;
+    if(!p.tgt||!p.tgt.alive)p.tgt=nearestEnemy(p.x,p.y);
+    if(p.tgt&&p.tgt.alive){
+      let tx=p.tgt.x+7,ty=p.tgt.y+7,dx=tx-p.x,dy=ty-p.y,td=Math.sqrt(dx*dx+dy*dy);
+      if(td>8){let ta=Math.atan2(dy,dx),ca=Math.atan2(p.vy,p.vx),diff=ta-ca;while(diff>Math.PI)diff-=Math.PI*2;while(diff<-Math.PI)diff+=Math.PI*2;let na=ca+diff*0.13,spd=7.5;p.vx=Math.cos(na)*spd;p.vy=Math.sin(na)*spd;}
+    }
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.age%3===0)addP(p.x,p.y,2,'#00aaff');
+    if(p.x<0||p.x>MW*T||p.y<0||p.y>MH*T){p.alive=false;continue;}
+    if(cMap(~~(p.x/T),~~(p.y/T),1,1)){addP(p.x,p.y,6,'#00ffff');p.alive=false;continue;}
+    for(let e of enemies){if(!e.alive)continue;if(ol({x:p.x-p.r,y:p.y-p.r,w:p.r*2,h:p.r*2},e)){e.hp-=2;addP(e.x+7,e.y+7,8,'#00ffff');addF(e.x,e.y-8,'-2','#00ffff');if(e.hp<=0)killEnemy(e);addP(p.x,p.y,6,'#00ffff');p.alive=false;break;}}
+  }
+  pProjs=pProjs.filter(p=>p.alive);
+}
+
+// ── Enemies & pickups ─────────────────────────────────────
+function spawnE(x,y,type){
+  let e={x,y,w:14,h:14,vx:0,vy:0,onG:false,alive:true,type,spd:type==='ghost'?.9:type==='shadow'?1.4:.6,hp:type==='shadow'?3:2,dir:1,at:0,fy:0,wt:0};
+  e.mhp=e.hp;enemies.push(e);
+}
+function spawnSoul(x,y){pickups.push({x,y:y-10,w:8,h:8,fo:rnf(0,Math.PI*2),done:false});}
+function spawnBoss(){boss={x:60*T,y:10*T,w:32,h:32,vx:0,vy:0,onG:false,alive:true,hp:30,mhp:30,at:0,dir:1,anim:0,mode:'normal',mtmr:0,bc:0,spin:0,rvx:0};}
+
+// ── Stage progression ─────────────────────────────────────
+function checkStage(){
+  if(survivalMode)return;
+  if(stage===1&&souls>=10){stage=2;souls=0;maxSouls=15;showMsg('Shadow Depths\n[Dash] + [Greatsword] Unlocked!',200);for(let i=0;i<8;i++)spawnE(rng(20,MW-5)*T,20*T,'shadow');updUI();}
+  else if(stage===2&&souls>=15){stage=3;souls=0;maxSouls=1;pl.mhp=5;pl.hp=5;showMsg('Final Trial\nHP boosted to 5!\nBlade Beam awakened\nDefeat the Guardian!',220);spawnBoss();updUI();}
+  else if(stage===3&&bossKilled){survivalMode=true;hasGun=true;waveTimer=0;waveCount=0;killCount=0;showMsg('Boss Defeated!\n\nEnergy Gun acquired!\nSurvive the endless horde!',260);updUI();}
+}
+function showMsg(t,f){msgTxt=t;msgTmr=f;updUI();}
+function updUI(){
+  document.getElementById('hp').textContent=pl.hp;
+  document.getElementById('mhp').textContent=pl.mhp;
+  const n={1:'Spirit Ruins',2:'Shadow Depths',3:'Final Trial'};
+  document.getElementById('stg').textContent=survivalMode?'Survival':n[stage]||'?';
+  let bar=document.getElementById('sb');bar.innerHTML='';
+  if(survivalMode){bar.innerHTML='<span style="color:#00ffcc;font-size:11px">Wave '+waveCount+' | Kills: '+killCount+'</span>';}
+  else{let show=Math.min(maxSouls,15);for(let i=0;i<show;i++){let d=document.createElement('div');d.className='sd'+(i<souls?' sf':'');bar.appendChild(d);}}
+  document.getElementById('msg').textContent=msgTxt;
+}
+
+// ── Input ─────────────────────────────────────────────────
+window.addEventListener('keydown',e=>{
+  if(!keys[e.code]){
+    let now=Date.now();
+    if(e.code==='ArrowLeft'||e.code==='KeyA'){if(now-lastTap.l<240)tryDash(-1);lastTap.l=now;}
+    if(e.code==='ArrowRight'||e.code==='KeyD'){if(now-lastTap.r<240)tryDash(1);lastTap.r=now;}
+    if((e.code==='ArrowUp'||e.code==='KeyW'||e.code==='KeyZ')&&gs==='PLAYING'){if(pl.jl>0){pl.vy=pl.jf;pl.jl--;if(pl.jl===0){addP(pl.x+7,pl.y+14,12,'#cc99ff');addF(pl.x+2,pl.y-2,'2x Jump!','#cc99ff');}}}
+  }
+  keys[e.code]=true;if(e.code==='KeyR')init();e.preventDefault();
+});
+window.addEventListener('keyup',e=>{keys[e.code]=false;});
+const iL=()=>keys['ArrowLeft']||keys['KeyA'];
+const iR=()=>keys['ArrowRight']||keys['KeyD'];
+const iA=()=>keys['KeyX']||keys['Space'];
+
+// ── Main update ───────────────────────────────────────────
+function update(){
+  if(gs!=='PLAYING')return;fc++;
+  if(!dash.active){
+    let mv2=false;
+    if(iL()){pl.vx=-pl.spd;pl.face=-1;mv2=true;}else if(iR()){pl.vx=pl.spd;pl.face=1;mv2=true;}else pl.vx*=0.75;
+    if(pl.onG)pl.jl=2;
+    if(pl.atk>0)pl.atk--;
+    if(hasGun){if(gunCd>0)gunCd--;if(iA()&&gunCd<=0){gunCd=14;fireGun();}}
+    else{if(iA()&&pl.atk<=0){pl.atk=28;let cx=pl.x+pl.w/2,cy=pl.y+pl.h/2;stage===1?spawnWave(cx,cy,pl.face):spawnGS(cx,cy,pl.face);addP(cx,cy,5,stage>=2?'#ffffaa':'#ddaaff');}}
+    if(!pl.onG)pl.st='jump';else if(mv2)pl.st='run';else if(pl.atk>20)pl.st='atk';else pl.st='idle';
+    mvEnt(pl);
+  }
+  updDash();if(pl.inv>0)pl.inv--;pl.at++;
+  let tcx=pl.x-W/2+pl.w/2,tcy=pl.y-H/2+pl.h/2;
+  cam.x+=(tcx-cam.x)*.1;cam.y+=(tcy-cam.y)*.1;
+  cam.x=Math.max(0,Math.min(MW*T-W,cam.x));cam.y=Math.max(0,Math.min(MH*T-H,cam.y));
+  updWaves();updGS();updSBeams();updPProjs();
+
+  // Survival spawning
+  if(survivalMode){
+    waveTimer++;
+    let intv=Math.max(90,210-waveCount*5);
+    if(waveTimer>=intv){
+      waveTimer=0;waveCount++;
+      let cnt=Math.min(6+waveCount*3,40);
+      for(let i=0;i<cnt;i++){
+        let r=Math.random(),type=r<0.35?'ghost':r<0.65?'wisp':'shadow';
+        let side=Math.random()<0.5?-1:1,ex=pl.x+side*rng(180,480);
+        ex=Math.max(T,Math.min((MW-2)*T,ex));spawnE(ex,18*T,type);
+      }
+      updUI();
+    }
+  }
+
+  // Enemies
+  for(let e of enemies){
+    if(!e.alive)continue;e.at++;e.fy=Math.sin(fc*.06+e.at*.05)*4;
+    let dx=pl.x-e.x,dy=pl.y-e.y,d=Math.sqrt(dx*dx+dy*dy);
+    if(d<320){e.dir=dx>0?1:-1;e.vx=e.dir*e.spd;if(e.type==='shadow'&&e.onG&&d<110&&dy<-20)e.vy=-4.5;if(e.type==='wisp'){e.wt++;if(e.wt%100===0&&d<260){let s=1.35;eProjs.push({x:e.x+7,y:e.y+7,vx:(dx/d)*s,vy:(dy/d)*s,col:'#55ffff',alive:true,r:5});}}}else e.vx*=.9;
+    mvEnt(e);if(!e.alive)continue;
+    if(e.vx!==0){let nx=e.x+(e.dir>0?e.w+1:-1);if(cMap(nx,e.y,1,e.h)){e.dir*=-1;e.vx*=-1;}}
+    if(pl.inv<=0&&ol(pl,e))hurtPl(1,e);
+  }
+  enemies=enemies.filter(e=>e.alive);
+
+  // Boss
+  if(boss&&boss.alive){
+    boss.anim++;let dx=pl.x+7-(boss.x+16),dy=pl.y+7-(boss.y+16);boss.dir=dx>0?1:-1;
+    let enraged=boss.hp<boss.mhp*.5;
+    if(boss.mode==='normal'){boss.vx=boss.dir*1.3;boss.at++;if(boss.at>=62){boss.at=0;boss.bc++;for(let a=-2;a<=2;a++){let ang=Math.atan2(dy,dx)+a*.3;eProjs.push({x:boss.x+16,y:boss.y+16,vx:Math.cos(ang)*2.2,vy:Math.sin(ang)*2.2,col:'#ff5500',alive:true,r:5});}addP(boss.x+16,boss.y+16,8,'#ff6600');if(boss.bc>=3){boss.bc=0;boss.mode='windup';boss.mtmr=38;boss.vx=0;addF(boss.x,boss.y-22,'Rush Slash!','#ff2200');}}}
+    else if(boss.mode==='windup'){boss.mtmr--;boss.vx=0;boss.spin+=.18;if(boss.mtmr<=0){boss.mode='rush';boss.mtmr=50;boss.rvx=boss.dir*9;}}
+    else if(boss.mode==='rush'){boss.mtmr--;boss.vx=boss.rvx;boss.spin+=.28;let pdx=pl.x+7-(boss.x+16),pdy=pl.y+7-(boss.y+16);if(pl.inv<=0&&Math.sqrt(pdx*pdx+pdy*pdy)<42)hurtPl(2,boss);if(boss.mtmr<=0){boss.mode='recover';boss.mtmr=32;boss.vx=0;}}
+    else if(boss.mode==='recover'){boss.mtmr--;boss.vx*=.82;boss.spin+=.06;if(boss.mtmr<=0){if(!enraged){boss.mode='pause';boss.mtmr=90;boss.spin=0;}else{boss.mode='normal';boss.at=0;boss.spin=0;}}}
+    else if(boss.mode==='pause'){boss.vx*=.8;boss.mtmr--;if(boss.mtmr<=0){boss.mode='normal';boss.at=0;}}
+    mvEnt(boss);
+    if(boss.hp<=0){boss.alive=false;bossKilled=true;addP(boss.x+16,boss.y+16,40,'#ff8800');for(let i=0;i<5;i++)spawnSoul(boss.x+rng(-20,20),boss.y);checkStage();}
+  }
+
+  // Enemy projectiles
+  for(let p of eProjs){
+    p.x+=p.vx;p.y+=p.vy;
+    if(p.x<cam.x-60||p.x>cam.x+W+60||p.y<cam.y-60||p.y>cam.y+H+60||cMap(~~(p.x/T),~~(p.y/T),1,1)){p.alive=false;continue;}
+    if(pl.inv<=0&&ol({x:p.x-p.r,y:p.y-p.r,w:p.r*2,h:p.r*2},pl)){hurtPl(1,null);p.alive=false;}
+  }
+  eProjs=eProjs.filter(p=>p.alive);
+
+  // Soul pickups (only in non-survival)
+  for(let s of pickups){
+    if(s.done)continue;s.y+=Math.sin(fc*.08+s.fo)*.3;
+    if(ol({x:s.x-4,y:s.y-4,w:s.w+8,h:s.h+8},pl)&&!survivalMode){s.done=true;souls=Math.min(souls+1,maxSouls);addF(s.x,s.y,'+Soul','#cc99ff');addP(s.x+4,s.y+4,6,'#cc99ff');updUI();checkStage();}
+  }
+  pickups=pickups.filter(s=>!s.done);
+  for(let p of parts){p.x+=p.vx;p.y+=p.vy;p.vy+=.15;p.l--;}parts=parts.filter(p=>p.l>0);
+  for(let f of floats){f.y+=f.vy;f.l--;}floats=floats.filter(f=>f.l>0);
+  if(msgTmr>0){msgTmr--;if(msgTmr===0&&gs==='PLAYING'){msgTxt='';updUI();}}
+  if(!survivalMode&&enemies.length<3+stage*2&&stage<3&&fc%300===0){let type=stage===1?(Math.random()<.5?'ghost':'wisp'):'shadow';let ex=pl.x+(Math.random()<.5?-1:1)*rng(200,400);ex=Math.max(T,Math.min((MW-2)*T,ex));spawnE(ex,18*T,type);}
+}
+
+// ── Draw ──────────────────────────────────────────────────
+function drawBG(){
+  let g=ctx.createLinearGradient(0,0,0,H);
+  g.addColorStop(0,stage===3||survivalMode?'#200010':'#0d001a');
+  g.addColorStop(1,stage===3||survivalMode?'#440022':'#1a0033');
+  ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+  let s=42;for(let i=0;i<80;i++){s=(s*1664525+1013904223)&0xffffffff;let sx=(s>>>1)%W;s=(s*1664525+1013904223)&0xffffffff;let sy=(s>>>1)%(H*.7);let b=Math.sin(fc*.04+i*1.7);ctx.globalAlpha=.25+b*.25;ctx.fillStyle='#fff';ctx.fillRect(sx,sy,b>.5?2:1,b>.5?2:1);}
+  ctx.globalAlpha=1;
+  ctx.fillStyle=survivalMode?'#ff2200':stage===3?'#ff4400':'#8866bb';
+  ctx.beginPath();ctx.arc(W*.8-(cam.x*.05)%W,60,28,0,Math.PI*2);ctx.fill();
+  ctx.fillStyle=survivalMode?'#1a0000':stage===3?'#330011':'#0d001a';
+  ctx.beginPath();ctx.arc(W*.8-(cam.x*.05)%W+10,55,24,0,Math.PI*2);ctx.fill();
+}
+function drawTiles(){
+  let x0=~~(cam.x/T),y0=~~(cam.y/T),x1=Math.ceil((cam.x+W)/T),y1=Math.ceil((cam.y+H)/T);
+  for(let ty=y0;ty<=y1;ty++)for(let tx=x0;tx<=x1;tx++){
+    let t=gT(tx,ty);if(!t)continue;let sx=SX(tx*T),sy2=SY(ty*T);
+    ctx.fillStyle=t===2?'#3a1a55':survivalMode?'#6a1a1a':stage===3?'#5a1a33':stage===2?'#442266':'#7744aa';
+    ctx.fillRect(sx,sy2,T,T);
+    if(gT(tx,ty-1)===0){ctx.fillStyle=survivalMode?'#ff4444':stage===3?'#cc4466':'#aa66dd';ctx.fillRect(sx,sy2,T,2);}
+    ctx.strokeStyle='rgba(0,0,0,0.3)';ctx.lineWidth=.5;ctx.strokeRect(sx+.5,sy2+.5,T-1,T-1);
+    if((tx*7+ty*13)%15===0&&gT(tx,ty-1)===0){ctx.fillStyle='rgba(200,150,255,0.45)';ctx.font='8px monospace';ctx.fillText('✦',sx+4,sy2+13);}
+  }
+}
+function drawCat(){
+  let sx=SX(pl.x),sy=SY(pl.y),flip=pl.face<0,inv=pl.inv>0&&fc%6<3,bob=pl.st==='run'?Math.sin(fc*.3)*1.5:0;
+  ctx.save();if(flip){ctx.translate(sx+pl.w,sy);ctx.scale(-1,1);sx=0;sy=0;}if(inv)ctx.globalAlpha=.4;
+  let ox=flip?0:sx,oy=(flip?sy:sy)+bob;
+  if(dash.active){ctx.globalAlpha=inv?.1:.28;ctx.fillStyle='#8833cc';ctx.beginPath();ctx.arc(ox+7,oy+7,12,0,Math.PI*2);ctx.fill();ctx.globalAlpha=inv?.4:1;}
+  if(pl.jl===0&&!pl.onG){ctx.globalAlpha=inv?.08:.22;ctx.fillStyle='#aa55ff';ctx.beginPath();ctx.arc(ox+7,oy+12,9+Math.sin(fc*.3)*2,0,Math.PI*2);ctx.fill();ctx.globalAlpha=inv?.4:1;}
+  ctx.fillStyle='#6622aa';ctx.fillRect(ox-3,oy+8+Math.sin(fc*.2)*3,5,3);ctx.fillRect(ox-7,oy+5+Math.sin(fc*.2)*2,5,3);
+  ctx.fillStyle='#3d1166';ctx.fillRect(ox+1,oy+5,12,9);ctx.fillStyle='#5522aa';ctx.fillRect(ox+1,oy,12,9);
+  ctx.fillStyle='#7733cc';ctx.fillRect(ox+1,oy-3,3,4);ctx.fillRect(ox+9,oy-3,3,4);
+  ctx.fillStyle='#cc66ff';ctx.fillRect(ox+2,oy-2,2,3);ctx.fillRect(ox+10,oy-2,2,3);
+  let blink=pl.at%120>116;
+  if(!blink){ctx.fillStyle='#00ffcc';ctx.fillRect(ox+3,oy+2,2,2);ctx.fillRect(ox+8,oy+2,2,2);ctx.fillStyle='#003322';ctx.fillRect(ox+4,oy+2,1,2);ctx.fillRect(ox+9,oy+2,1,2);}
+  else{ctx.fillStyle='#00ffcc';ctx.fillRect(ox+3,oy+3,2,1);ctx.fillRect(ox+8,oy+3,2,1);}
+  ctx.fillStyle='#ff99cc';ctx.fillRect(ox+6,oy+5,2,1);
+  ctx.strokeStyle='rgba(200,150,255,0.6)';ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(ox+3,oy+5);ctx.lineTo(ox-5,oy+4);ctx.moveTo(ox+3,oy+6);ctx.lineTo(ox-5,oy+7);ctx.moveTo(ox+10,oy+5);ctx.lineTo(ox+18,oy+4);ctx.moveTo(ox+10,oy+6);ctx.lineTo(ox+18,oy+7);ctx.stroke();
+  ctx.fillStyle='#4a1a88';let lo=pl.st==='run'?Math.sin(fc*.3)*2:0;ctx.fillRect(ox+2,oy+13,3,3+lo);ctx.fillRect(ox+8,oy+13,3,3-lo);
+  // Gun visual when hasGun
+  if(hasGun){
+    let glow=.6+Math.sin(fc*.15)*.3;
+    ctx.globalAlpha=inv?.2:glow;ctx.fillStyle='#00ffff';
+    ctx.fillRect(ox+12,oy+5,7,4); // barrel
+    ctx.fillRect(ox+11,oy+4,4,6); // grip
+    ctx.fillStyle='#ffffff';ctx.fillRect(ox+15,oy+6,3,2); // core
+    // muzzle flash when just fired
+    if(gunCd>10){ctx.globalAlpha=inv?.1:.7;ctx.fillStyle='#00ffff';ctx.beginPath();ctx.arc(ox+20,oy+7,4,0,Math.PI*2);ctx.fill();}
+    ctx.globalAlpha=inv?.4:1;
+  } else if(stage>=2){ctx.fillStyle='#888';ctx.fillRect(ox+11,oy+2,3,8);ctx.fillStyle='#aaaaff';ctx.fillRect(ox+9,oy+3,2,2);}
+  ctx.globalAlpha=(inv?.04:.11)+Math.sin(fc*.08)*.04;ctx.fillStyle=hasGun?'#00aaff':'#aa55ff';ctx.beginPath();ctx.arc(ox+7,oy+7,13,0,Math.PI*2);ctx.fill();
+  ctx.globalAlpha=1;ctx.restore();
+}
+function drawWaves(){
+  for(let w of waves){
+    let sx=SX(w.cx),sy=SY(w.cy),a=w.l/w.ml,sa=w.dir>0?-Math.PI*.65:Math.PI*.35,ea=w.dir>0?Math.PI*.65:Math.PI*1.65;
+    ctx.save();ctx.globalAlpha=a*.18;ctx.strokeStyle='#cc88ff';ctx.lineWidth=16;ctx.beginPath();ctx.arc(sx,sy,w.r,sa,ea);ctx.stroke();ctx.globalAlpha=a*.5;ctx.strokeStyle='#ee99ff';ctx.lineWidth=6;ctx.beginPath();ctx.arc(sx,sy,w.r,sa,ea);ctx.stroke();ctx.globalAlpha=a*.95;ctx.strokeStyle='#fff';ctx.lineWidth=2;ctx.beginPath();ctx.arc(sx,sy,w.r,sa,ea);ctx.stroke();ctx.globalAlpha=1;ctx.lineWidth=1;ctx.restore();
+  }
+}
+function drawGS(){
+  if(!gsword.active)return;let sx=SX(gsword.cx),sy=SY(gsword.cy),p=1-gsword.tmr/gsword.dur;
+  let sa=gsword.dir>0?-1.35:Math.PI+1.35,ea=gsword.dir>0?1.15:Math.PI-1.15,ang=sa+(ea-sa)*p,bl=68;
+  let ex2=sx+Math.cos(ang)*bl,ey2=sy+Math.sin(ang)*bl;
+  ctx.save();let a0=Math.min(sa,ang),a1=Math.max(sa,ang);
+  ctx.globalAlpha=.12;ctx.strokeStyle='#ffffaa';ctx.lineWidth=24;ctx.lineCap='round';ctx.beginPath();ctx.arc(sx,sy,bl*.68,a0,a1);ctx.stroke();
+  ctx.globalAlpha=.28;ctx.strokeStyle='#fff';ctx.lineWidth=10;ctx.beginPath();ctx.arc(sx,sy,bl*.72,a0,a1);ctx.stroke();
+  ctx.globalAlpha=1;ctx.strokeStyle='#ffffcc';ctx.lineWidth=10;ctx.globalAlpha=.38;ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(ex2,ey2);ctx.stroke();
+  ctx.globalAlpha=1;ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(ex2,ey2);ctx.stroke();
+  ctx.strokeStyle='#aaaaff';ctx.lineWidth=3;let gx=sx+Math.cos(ang)*14,gy=sy+Math.sin(ang)*14;ctx.beginPath();ctx.moveTo(gx-Math.sin(ang)*9,gy+Math.cos(ang)*9);ctx.lineTo(gx+Math.sin(ang)*9,gy-Math.cos(ang)*9);ctx.stroke();
+  if(p>.3&&p<.8){for(let i=0;i<4;i++){let sa2=ang-.6+i*.4;ctx.globalAlpha=.7*(1-p);ctx.strokeStyle='#ffffaa';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(ex2,ey2);ctx.lineTo(ex2+Math.cos(sa2)*18,ey2+Math.sin(sa2)*18);ctx.stroke();}}
+  ctx.globalAlpha=1;ctx.lineCap='butt';ctx.lineWidth=1;ctx.restore();
+}
+function drawSBeams(){
+  for(let sp of sBeams){
+    let sx=SX(sp.x),sy=SY(sp.y),a=Math.max(.25,1-sp.age/70);
+    ctx.save();ctx.globalAlpha=a*.18;ctx.strokeStyle='#ffffaa';ctx.lineWidth=22;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(sx,sy+sp.h/2);ctx.lineTo(sx+sp.dir*sp.w,sy+sp.h/2);ctx.stroke();
+    ctx.globalAlpha=a*.45;ctx.strokeStyle='#ffeeaa';ctx.lineWidth=10;ctx.beginPath();ctx.moveTo(sx,sy+sp.h/2);ctx.lineTo(sx+sp.dir*sp.w,sy+sp.h/2);ctx.stroke();
+    ctx.globalAlpha=a;ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(sx,sy+sp.h/2);ctx.lineTo(sx+sp.dir*sp.w,sy+sp.h/2);ctx.stroke();
+    let tx2=sx+sp.dir*sp.w,ty2=sy+sp.h/2;ctx.globalAlpha=a*.8;ctx.strokeStyle='#ffffcc';ctx.lineWidth=1;
+    for(let i=0;i<6;i++){let ang=i*Math.PI/3+fc*.2;ctx.beginPath();ctx.moveTo(tx2,ty2);ctx.lineTo(tx2+Math.cos(ang)*6,ty2+Math.sin(ang)*6);ctx.stroke();}
+    ctx.globalAlpha=1;ctx.lineCap='butt';ctx.lineWidth=1;ctx.restore();
+  }
+}
+function drawPProjs(){
+  for(let p of pProjs){
+    let sx=SX(p.x),sy=SY(p.y),a=Math.min(1,p.age/5);
+    ctx.save();
+    // Homing guide line
+    if(p.tgt&&p.tgt.alive){ctx.globalAlpha=a*.12;ctx.strokeStyle='#00ffff';ctx.lineWidth=1;ctx.setLineDash([3,8]);ctx.beginPath();ctx.moveTo(sx,sy);ctx.lineTo(SX(p.tgt.x+7),SY(p.tgt.y+7));ctx.stroke();ctx.setLineDash([]);}
+    ctx.globalAlpha=a*.15;ctx.fillStyle='#00ffff';ctx.beginPath();ctx.arc(sx,sy,p.r+8+Math.sin(fc*.3)*2,0,Math.PI*2);ctx.fill();
+    ctx.globalAlpha=a*.55;ctx.fillStyle='#00ddff';ctx.beginPath();ctx.arc(sx,sy,p.r+2,0,Math.PI*2);ctx.fill();
+    ctx.globalAlpha=a;ctx.fillStyle='#ffffff';ctx.beginPath();ctx.arc(sx,sy,p.r-1,0,Math.PI*2);ctx.fill();
+    ctx.globalAlpha=1;ctx.restore();
+  }
+}
+function drawEnemy(e){
+  let sx=SX(e.x),sy=SY(e.y)+e.fy,a=e.at;
+  if(e.type==='ghost'){let w2=Math.sin(a*.08)*2;ctx.globalAlpha=.85;ctx.fillStyle='#ccaaee';ctx.beginPath();ctx.arc(sx+7,sy+5+w2,7,Math.PI,0);ctx.fill();ctx.fillRect(sx,sy+5+w2,14,8);for(let i=0;i<3;i++){ctx.beginPath();ctx.arc(sx+i*4.5+2.25,sy+13+w2+Math.sin(a*.1+i)*2,2.25,0,Math.PI);ctx.fill();}ctx.fillStyle='#220033';ctx.fillRect(sx+3,sy+4+w2,3,3);ctx.fillRect(sx+9,sy+4+w2,3,3);ctx.fillStyle='#ff00ff';ctx.fillRect(sx+4,sy+5+w2,2,2);ctx.fillRect(sx+10,sy+5+w2,2,2);ctx.globalAlpha=1;}
+  else if(e.type==='shadow'){ctx.fillStyle='#110022';ctx.fillRect(sx+1,sy+3,12,11);ctx.fillStyle='#330055';ctx.fillRect(sx+2,sy+1,10,5);ctx.fillStyle='#550088';ctx.fillRect(sx+1,sy-3,2,5);ctx.fillRect(sx+11,sy-3,2,5);ctx.fillStyle='#ff2200';ctx.fillRect(sx+3,sy+4,3,3);ctx.fillRect(sx+9,sy+4,3,3);ctx.globalAlpha=.18;ctx.fillStyle='#ff0000';ctx.beginPath();ctx.arc(sx+7,sy+7,12,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}
+  else if(e.type==='wisp'){let pu=Math.sin(a*.1)*2;ctx.globalAlpha=.9;ctx.fillStyle='#0066ff';ctx.beginPath();ctx.arc(sx+7,sy+7,7+pu,0,Math.PI*2);ctx.fill();ctx.fillStyle='#88ccff';ctx.beginPath();ctx.arc(sx+5,sy+5,3,0,Math.PI*2);ctx.fill();ctx.globalAlpha=.22+Math.sin(a*.15)*.12;ctx.fillStyle='#4488ff';ctx.beginPath();ctx.arc(sx+7,sy+7,12+pu,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}
+  if(e.hp<e.mhp){ctx.fillStyle='#330011';ctx.fillRect(sx-1,sy-6,e.w+2,4);ctx.fillStyle='#ff3399';ctx.fillRect(sx-1,sy-6,(e.w+2)*(e.hp/e.mhp),4);}
+}
+function drawBossBody(ox,oy,ph){
+  ctx.fillStyle=ph===2?'#3a0000':'#1a0033';ctx.fillRect(ox+2,oy+10,28,22);ctx.fillStyle=ph===2?'#550000':'#330066';ctx.fillRect(ox+4,oy+2,24,16);ctx.fillStyle=ph===2?'#880000':'#550099';ctx.fillRect(ox+3,oy-5,5,8);ctx.fillRect(ox+24,oy-5,5,8);ctx.fillStyle=ph===2?'#ff2200':'#9900ff';ctx.fillRect(ox+13,oy+2,2,8);ctx.fillRect(ox+10,oy+5,5,2);ctx.fillStyle=ph===2?'#ff4400':'#ff00ff';ctx.fillRect(ox+7,oy+5,5,5);ctx.fillRect(ox+20,oy+5,5,5);ctx.fillStyle='#fff';ctx.fillRect(ox+9,oy+6,2,3);ctx.fillRect(ox+22,oy+6,2,3);ctx.fillStyle=ph===2?'#660000':'#440066';ctx.fillRect(ox,oy+22,5,10);ctx.fillRect(ox+27,oy+22,5,10);ctx.fillStyle='#ccc';for(let i=0;i<3;i++){ctx.fillRect(ox+i*2,oy+30,1,4);ctx.fillRect(ox+28+i*2,oy+30,1,4);}
+}
+function drawBoss(){
+  if(!boss||!boss.alive)return;
+  let bsx=SX(boss.x),bsy=SY(boss.y),ph=boss.hp<boss.mhp*.5?2:1,pu=Math.sin(boss.anim*.1);
+  if(boss.mode==='pause'){ctx.globalAlpha=.22+Math.sin(fc*.15)*.1;ctx.fillStyle='#ffcc00';ctx.beginPath();ctx.arc(bsx+16,bsy+16,36,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;ctx.fillStyle='#ffff88';ctx.font='bold 9px monospace';ctx.fillText('★ Opening ★',bsx-6,bsy-20);}
+  else{ctx.globalAlpha=.13+pu*.07;ctx.fillStyle=ph===2?'#ff3300':'#ff6600';ctx.beginPath();ctx.arc(bsx+16,bsy+16,30+pu*5,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}
+  let spinning=boss.mode==='windup'||boss.mode==='rush';
+  if(spinning){ctx.save();ctx.translate(bsx+16,bsy+16);ctx.rotate(boss.spin);drawBossBody(-16,-16,ph);if(boss.mode==='rush'){for(let i=0;i<5;i++){let ang=boss.spin+i*(Math.PI*2/5);ctx.globalAlpha=.55;ctx.strokeStyle=ph===2?'#ff4400':'#cc00ff';ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(Math.cos(ang)*44,Math.sin(ang)*44);ctx.stroke();ctx.globalAlpha=.2;ctx.strokeStyle='#fff';ctx.lineWidth=8;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(Math.cos(ang)*44,Math.sin(ang)*44);ctx.stroke();}ctx.globalAlpha=1;}else{ctx.globalAlpha=.4+Math.sin(fc*.3)*.3;ctx.fillStyle='#ff2200';ctx.beginPath();ctx.arc(0,0,20,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}ctx.restore();}
+  else drawBossBody(bsx,bsy,ph);
+  ctx.fillStyle='#330011';ctx.fillRect(bsx-2,bsy-14,boss.w+4,7);
+  ctx.fillStyle=ph===2?'#ff2200':'#ff6600';ctx.fillRect(bsx-2,bsy-14,(boss.w+4)*(boss.hp/boss.mhp),7);
+  ctx.strokeStyle='#ffaa00';ctx.lineWidth=1;ctx.strokeRect(bsx-2,bsy-14,boss.w+4,7);
+  ctx.fillStyle='#ffdd88';ctx.font='9px monospace';
+  const lbl={normal:'BOSS',windup:'Charging...',rush:'Rush Slash!',recover:'Cooldown',pause:'★ Opening ★'};
+  ctx.fillText(lbl[boss.mode]||'BOSS',bsx+3,bsy-7);
+}
+function drawSouls(){for(let s of pickups){let sx=SX(s.x),sy=SY(s.y),pu=Math.sin(fc*.1+s.fo);ctx.globalAlpha=.7+pu*.3;ctx.fillStyle='#aa66ff';ctx.beginPath();ctx.arc(sx+4,sy+4,5+pu,0,Math.PI*2);ctx.fill();ctx.fillStyle='#ddaaff';ctx.beginPath();ctx.arc(sx+3,sy+3,2,0,Math.PI*2);ctx.fill();ctx.globalAlpha=.16+pu*.07;ctx.fillStyle='#cc99ff';ctx.beginPath();ctx.arc(sx+4,sy+4,9+pu*2,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}}
+function drawEProjs(){for(let p of eProjs){let sx=SX(p.x),sy=SY(p.y);ctx.globalAlpha=.9;ctx.fillStyle=p.col;ctx.beginPath();ctx.arc(sx,sy,p.r,0,Math.PI*2);ctx.fill();ctx.globalAlpha=.3;ctx.fillStyle=p.col;ctx.beginPath();ctx.arc(sx,sy,p.r+3,0,Math.PI*2);ctx.fill();ctx.globalAlpha=1;}}
+function drawParts(){for(let p of parts){ctx.globalAlpha=p.l/p.ml;ctx.fillStyle=p.col;ctx.fillRect(~~SX(p.x),~~SY(p.y),p.s,p.s);}ctx.globalAlpha=1;}
+function drawFloats(){for(let f of floats){ctx.globalAlpha=f.l/60;ctx.fillStyle=f.col;ctx.font='bold 10px monospace';ctx.fillText(f.t,SX(f.x),SY(f.y));}ctx.globalAlpha=1;}
+function drawHUD(){
+  // Hearts
+  let hx=8,hy=H-22;for(let i=0;i<pl.mhp;i++){ctx.globalAlpha=i<pl.hp?1:.22;ctx.fillStyle=survivalMode?'#ff4444':stage===3?'#ff6644':'#aa44ff';ctx.font='14px monospace';ctx.fillText('♥',hx+i*16,hy);}ctx.globalAlpha=1;
+  // Gun HUD
+  if(hasGun){
+    let gx=8,gy=H-40;
+    ctx.fillStyle='rgba(0,0,50,0.6)';ctx.fillRect(gx,gy,100,13);
+    ctx.fillStyle=gunCd>0?'#006688':'#00ffff';ctx.fillRect(gx+1,gy+1,98*(1-gunCd/14),11);
+    ctx.strokeStyle='#00ccff';ctx.lineWidth=1;ctx.strokeRect(gx,gy,100,13);
+    ctx.fillStyle='#00ffff';ctx.font='bold 8px monospace';ctx.fillText(gunCd>0?'⚡ CHARGING':'⚡ READY',gx+4,gy+9);
+  }
+  // Dash bar
+  if(stage>=2){
+    let dx=8,dy=hasGun?H-58:H-40;
+    ctx.fillStyle='rgba(0,0,0,0.5)';ctx.fillRect(dx,dy,100,13);
+    ctx.fillStyle=dash.cd>0?'#553377':'#aa44ff';ctx.fillRect(dx+1,dy+1,98*(1-dash.cd/dash.maxCd),11);
+    ctx.strokeStyle='#8844cc';ctx.lineWidth=1;ctx.strokeRect(dx,dy,100,13);
+    ctx.fillStyle='#eee';ctx.font='8px monospace';ctx.fillText(dash.cd>0?'Dash '+Math.ceil(dash.cd/60)+'s':'Dash Ready',dx+4,dy+9);
+  }
+  // Jump dots
+  let jx=W-30,jy=H-28;for(let i=0;i<2;i++){ctx.fillStyle=i<pl.jl?'#cc99ff':'#331144';ctx.beginPath();ctx.arc(jx-i*16,jy,6,0,Math.PI*2);ctx.fill();ctx.strokeStyle='#6633aa';ctx.lineWidth=1;ctx.stroke();}
+  ctx.fillStyle='#aaa';ctx.font='8px monospace';ctx.fillText('Jump',jx-30,jy+4);
+  // Minimap
+  let mm={x:W-82,y:4,w:78,h:22};ctx.fillStyle='rgba(0,0,0,0.5)';ctx.fillRect(mm.x,mm.y,mm.w,mm.h);ctx.strokeStyle='#6633aa';ctx.lineWidth=1;ctx.strokeRect(mm.x,mm.y,mm.w,mm.h);
+  let sx2=mm.w/(MW*T),sy2=mm.h/(MH*T);ctx.fillStyle='#5533aa';for(let ty=20;ty<30;ty++)for(let tx=0;tx<MW;tx++)if(gT(tx,ty)>0)ctx.fillRect(mm.x+tx*sx2*T,mm.y+ty*sy2*T,1,1);
+  ctx.fillStyle='#00ffcc';ctx.fillRect(mm.x+pl.x*sx2,mm.y+pl.y*sy2,2,2);
+  if(boss&&boss.alive){ctx.fillStyle='#ff4400';ctx.fillRect(mm.x+boss.x*sx2,mm.y+boss.y*sy2,3,3);}
+  // Survival: show enemy count on minimap
+  if(survivalMode){ctx.fillStyle='#ff4444';for(let e of enemies.slice(0,50))ctx.fillRect(mm.x+e.x*sx2,mm.y+e.y*sy2,1,1);}
+  ctx.fillStyle='#aaa';ctx.font='8px monospace';ctx.fillText('Map',mm.x+2,mm.y+mm.h-2);
+}
+function draw(){
+  ctx.clearRect(0,0,W,H);drawBG();drawTiles();drawSouls();drawParts();
+  for(let e of enemies)drawEnemy(e);drawBoss();drawWaves();drawGS();drawSBeams();drawPProjs();drawCat();drawEProjs();drawFloats();drawHUD();
+  let v=ctx.createRadialGradient(W/2,H/2,H*.3,W/2,H/2,H*.8);v.addColorStop(0,'rgba(0,0,0,0)');v.addColorStop(1,'rgba(0,0,0,0.5)');ctx.fillStyle=v;ctx.fillRect(0,0,W,H);
+}
+
+function init(){
+  genWorld();pl=mkPl(3);
+  enemies=[];pickups=[];eProjs=[];pProjs=[];waves=[];gsword={active:false};sBeams=[];parts=[];floats=[];
+  dash={active:false,dir:0,tmr:0,dur:15,spd:12,cd:0,maxCd:180,hit:new Set()};
+  boss=null;souls=0;stage=1;maxSouls=10;hasGun=false;gunCd=0;
+  survivalMode=false;waveTimer=0;waveCount=0;killCount=0;
+  gs='PLAYING';bossKilled=false;msgTxt='';msgTmr=0;cam={x:0,y:0};
+  for(let i=0;i<8;i++)spawnE(rng(20,MW-10)*T,20*T,'ghost');
+  for(let i=0;i<4;i++)spawnE(rng(60,MW-5)*T,18*T,'wisp');
+  for(let i=0;i<3;i++)spawnE(rng(40,80)*T,22*T,'shadow');
+  updUI();
+}
+function loop(){update();draw();requestAnimationFrame(loop);}
+init();
+showMsg('Cat Soul Legend\n\n↑/Z Jump (double) | X Attack / Shoot\nDouble-tap ←→ Dash (Stage 2+)\n\nPress any key to start',320);
+loop();
+</script>
+          </div>
+        </div>
+        <div class="game-meta-grid">
+          <div class="game-meta-card"><p class="meta-label">Engine</p><p class="meta-val">HTML5 Canvas + JavaScript</p></div>
+          <div class="game-meta-card"><p class="meta-label">Origin</p><p class="meta-val">Scratch → JavaScript</p></div>
+          <div class="game-meta-card"><p class="meta-label">Stages</p><p class="meta-val">3 Stages + Survival Mode</p></div>
+          <div class="game-meta-card"><p class="meta-label">Controls</p><p class="meta-val">Arrow/WASD · Z Jump · X Attack · R Restart</p></div>
+        </div>
+        <div class="game-status">● PLAYABLE</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <div class="section-container">
+      <div class="section-num">06 //</div>
+      <h2 class="section-title">CONTACT</h2>
+      <p class="contact-intro">Want to reach out? Whether it's about my projects, CS class work, or just to say hi — feel free to send a message. I'm always happy to connect with fellow coders and learners! You can find me at frank.li@s.thevillageschool.com.</p>
+      <div class="contact-cards">
+        <div class="contact-card card-green-border">
+          <p class="contact-card-label">✉ Email</p>
+          <p class="contact-card-val green">frank.li@s.thevillageschool.com</p>
+        </div>
+        <div class="contact-card card-purple-border">
+          <p class="contact-card-label">🏫 School</p>
+          <p class="contact-card-val purple">8th Grade — Computer Science Class, USA</p>
+        </div>
+        <div class="contact-card card-cyan-border">
+          <p class="contact-card-label">⏰ Response Time</p>
+          <p class="contact-card-val cyan">Usually within a few days</p>
+        </div>
+      </div>
+      <!-- Contact Form -->
+      <div class="contact-form-box">
+        <p class="form-tag">// SEND A MESSAGE</p>
+        <form id="contact-form" class="contact-form" onsubmit="handleFormSubmit(event)">
+          <input type="text" placeholder="Enter your name..." class="form-input" required />
+          <input type="email" placeholder="Enter your email..." class="form-input" required />
+          <textarea placeholder="Write your message here..." class="form-textarea" required></textarea>
+          <button type="submit" class="btn-submit">TRANSMIT MESSAGE</button>
+        </form>
+        <div id="form-success" class="form-success" style="display:none;">✔ MESSAGE TRANSMITTED SUCCESSFULLY</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-stripe"></div>
+    <p class="footer-text">// FRANK'S CS PORTFOLIO // BUILT WITH PASSION AND CODE //</p>
+    <div class="footer-stripe"></div>
+  </footer>
+
+  <!-- Background Music -->
+  <audio id="bgm-player" loop preload="auto">
+    <source src="gundam_bgm.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Gundam Mode Active Banner -->
+  <div id="gundam-mode-banner" class="gundam-mode-banner" style="display:none;">
+    ⚔ GUNDAM MODE ACTIVE — CLICK ELEMENTS TO DESTROY THEM
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
